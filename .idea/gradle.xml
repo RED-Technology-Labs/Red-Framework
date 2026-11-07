@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/buildSrc" name="buildSrc">
+                <projects>
+                  <project path="$PROJECT_DIR$/buildSrc" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/apps" />
+            <option value="$PROJECT_DIR$/apps/server" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/application" />
+            <option value="$PROJECT_DIR$/core/attribute-types" />
+            <option value="$PROJECT_DIR$/core/identity" />
+            <option value="$PROJECT_DIR$/core/kernel" />
+            <option value="$PROJECT_DIR$/core/metadata" />
+            <option value="$PROJECT_DIR$/core/records" />
+            <option value="$PROJECT_DIR$/core/schema" />
+            <option value="$PROJECT_DIR$/core/site" />
+            <option value="$PROJECT_DIR$/infrastructure" />
+            <option value="$PROJECT_DIR$/infrastructure/database-migrations" />
+            <option value="$PROJECT_DIR$/infrastructure/database-postgres" />
+          </set>
+        </option>
+        <option name="myGradleHome" value="" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

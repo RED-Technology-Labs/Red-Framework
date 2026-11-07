@@ -1,0 +1,36 @@
+# Version catalog is a central place for you to declare and version dependencies
+# https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+kotlin = "2.4.21"
+kotlinxDatetime = "0.8.0"
+kotlinxSerializationJSON = "1.11.0"
+kotlinxCoroutines = "1.10.2"
+hikari = "7.1.0"
+postgresql = "42.7.14"
+testcontainers = "2.0.5"
+flyway = "13.12.1"
+ktor = "3.6.1"
+
+[libraries]
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
+kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+hikari = { module = "com.zaxxer:HikariCP", version.ref = "hikari" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+testcontainersPostgresql = { module = "org.testcontainers:testcontainers-postgresql", version.ref = "testcontainers" }
+testcontainersJunit = { module = "org.testcontainers:testcontainers-junit-jupiter", version.ref = "testcontainers" }
+flywayCore = { module = "org.flywaydb:flyway-core", version.ref = "flyway" }
+flywayPostgresql = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway" }
+ktorServerCore = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktorServerNetty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktorServerTestHost = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
+
+# Libraries can be bundled together for easier import
+[bundles]
+kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
+
+[plugins]
+kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
